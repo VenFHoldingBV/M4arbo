@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="calendar_appointment_type_view_form_inherited_covid" model="ir.ui.view">
+        <field name="model">calendar.appointment.type</field>
+        <field name="inherit_id" ref="website_calendar.calendar_appointment_type_view_form"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//page[@name='schedule_availability']//separator" position="replace">
+        		<separator string="Medical Staff"/>
+        	</xpath>
+        	<xpath expr="//page[@name='schedule_availability']//field[@name='employee_ids']/tree/field[@name='name']" position="attributes">
+        		<attribute name="string">Medical Staff Name</attribute>
+        	</xpath>
+        </field>
+    </record>
+</odoo>
